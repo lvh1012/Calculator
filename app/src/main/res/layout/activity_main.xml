@@ -63,10 +63,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#D3D3D3"
-            android:text="xoa"
+            android:text="&lt;="
             android:layout_margin="1dp"
-            android:textSize="20sp"
-            tools:text="xoa" />
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btn_chia"
@@ -74,10 +73,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#D3D3D3"
-            android:text="/"
+            android:text=":"
             android:layout_margin="1dp"
-            android:textSize="20sp"
-            tools:text="/" />
+            android:textSize="20sp"/>
     </LinearLayout>
 
         <LinearLayout
@@ -95,8 +93,7 @@
                 android:text="7"
                 android:layout_margin="1dp"
                 android:textStyle="bold"
-                android:textSize="20sp"
-                tools:text="7" />
+                android:textSize="20sp"/>
 
             <Button
                 android:id="@+id/btn_8"
@@ -107,8 +104,7 @@
                 android:layout_margin="1dp"
                 android:textStyle="bold"
                 android:background="#FFFFFF"
-                android:textSize="20sp"
-                tools:text="8" />
+                android:textSize="20sp"/>
 
             <Button
                 android:id="@+id/btn_9"
@@ -119,8 +115,7 @@
                 android:text="9"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
-                android:textSize="20sp"
-                tools:text="9" />
+                android:textSize="20sp"/>
 
             <Button
                 android:id="@+id/btn_nhan"
@@ -130,8 +125,7 @@
                 android:text="x"
                 android:layout_margin="1dp"
                 android:background="#D3D3D3"
-                android:textSize="20sp"
-                tools:text="x" />
+                android:textSize="20sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -149,8 +143,7 @@
                 android:layout_margin="1dp"
                 android:textStyle="bold"
                 android:background="#FFFFFF"
-                android:textSize="20sp"
-                tools:text="4" />
+                android:textSize="20sp"/>
 
             <Button
                 android:id="@+id/btn_5"
@@ -161,8 +154,7 @@
                 android:layout_margin="1dp"
                 android:textStyle="bold"
                 android:background="#FFFFFF"
-                android:textSize="20sp"
-                tools:text="5" />
+                android:textSize="20sp"/>
 
             <Button
                 android:id="@+id/btn_6"
@@ -173,8 +165,7 @@
                 android:text="6"
                 android:layout_margin="1dp"
                 android:textStyle="bold"
-                android:textSize="20sp"
-                tools:text="6" />
+                android:textSize="20sp"/>
 
             <Button
                 android:id="@+id/btn_tru"
@@ -184,8 +175,7 @@
                 android:background="#D3D3D3"
                 android:text="-"
                 android:layout_margin="1dp"
-                android:textSize="20sp"
-                tools:text="-" />
+                android:textSize="20sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -203,8 +193,7 @@
                 android:layout_margin="1dp"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:background="#FFFFFF"
-                tools:text="1" />
+                android:background="#FFFFFF"/>
 
             <Button
                 android:id="@+id/btn_2"
@@ -215,8 +204,7 @@
                 android:textSize="20sp"
                 android:text="2"
                 android:layout_margin="1dp"
-                android:textStyle="bold"
-                tools:text="2" />
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/btn_3"
@@ -227,8 +215,7 @@
                 android:textSize="20sp"
                 android:text="3"
                 android:layout_margin="1dp"
-                android:textStyle="bold"
-                tools:text="3" />
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/btn_cong"
@@ -238,8 +225,7 @@
                 android:background="#D3D3D3"
                 android:text="+"
                 android:layout_margin="1dp"
-                android:textSize="20sp"
-                tools:text="+" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -256,8 +242,7 @@
                 android:text="+/-"
                 android:layout_margin="1dp"
                 android:textSize="20sp"
-                android:background="#FFFFFF"
-                tools:text="+/-" />
+                android:background="#FFFFFF"/>
 
             <Button
                 android:id="@+id/btn_0"
@@ -268,8 +253,7 @@
                 android:layout_margin="1dp"
                 android:textStyle="bold"
                 android:background="#FFFFFF"
-                android:textSize="20sp"
-                tools:text="0" />
+                android:textSize="20sp"/>
 
             <Button
                 android:id="@+id/btn_cham"
@@ -279,8 +263,7 @@
                 android:text="."
                 android:textSize="20sp"
                 android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                tools:text="." />
+                android:background="#FFFFFF"/>
 
             <Button
                 android:id="@+id/btn_bang"
@@ -290,8 +273,7 @@
                 android:background="#7EC0EE"
                 android:text="="
                 android:layout_margin="1dp"
-                android:textSize="20sp"
-                tools:text="=" />
+                android:textSize="20sp"/>
         </LinearLayout>
 
     </LinearLayout>
