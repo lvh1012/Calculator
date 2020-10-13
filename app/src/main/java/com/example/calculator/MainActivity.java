@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String strKQ = txtKQ.getText().toString();
         switch(id) {
             case R.id.btn0:
-                if (strKQ == "0"){
+                if (strKQ.equals("0")){
                     if (soThuNhat.charAt(0) == '1'){
                         txtKQ.setText("0");
                         soThuNhat = "10";
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn1:
-                if (strKQ == "0"){
+                if (strKQ.equals("0")){
                     if (soThuNhat.charAt(0) == '1'){
                         txtKQ.setText("1");
                         soThuNhat = "11";
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn2:
-                if (strKQ == "0"){
+                if (strKQ.equals("0")){
                     if (soThuNhat.charAt(0) == '1'){
                         txtKQ.setText("2");
                         soThuNhat = "12";
@@ -206,7 +206,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn3:
-                if (strKQ == "0"){
+                if (strKQ.equals("0")){
                     if (soThuNhat.charAt(0) == '1'){
                         txtKQ.setText("3");
                         soThuNhat = "13";
@@ -246,7 +246,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn4:
-                if (strKQ == "0"){
+                if (strKQ.equals("0")){
                     if (soThuNhat.charAt(0) == '1'){
                         txtKQ.setText("4");
                         soThuNhat = "14";
@@ -286,7 +286,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn5:
-                if (strKQ == "0"){
+                if (strKQ.equals("0")){
                     if (soThuNhat.charAt(0) == '1'){
                         txtKQ.setText("5");
                         soThuNhat = "15";
@@ -326,7 +326,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn6:
-                if (strKQ == "0"){
+                if (strKQ.equals("0")){
                     if (soThuNhat.charAt(0) == '1'){
                         txtKQ.setText("6");
                         soThuNhat = "16";
@@ -366,7 +366,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn7:
-                if (strKQ == "0"){
+                if (strKQ.equals("0")){
                     if (soThuNhat.charAt(0) == '1'){
                         txtKQ.setText("7");
                         soThuNhat = "17";
@@ -406,7 +406,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn8:
-                if (strKQ == "0"){
+                if (strKQ.equals("0")){
                     if (soThuNhat.charAt(0) == '1'){
                         txtKQ.setText("8");
                         soThuNhat = "18";
@@ -446,7 +446,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn9:
-                if (strKQ == "0"){
+                if (strKQ.equals("0")){
                     if (soThuNhat.charAt(0) == '1'){
                         txtKQ.setText("9");
                         soThuNhat = "19";
@@ -506,7 +506,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     phepTinh = "/";
                 break;
             case R.id.btnBang:
-                if (strKQ != "0"){
                     int ketqua= 0;
 
                     if (soThuNhat.length() > 1 && soThuHai.length() > 1 && !phepTinh.isEmpty()){
@@ -625,7 +624,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     soThuNhat = "0" + Integer.toString(ketqua);
                     soThuHai = "1";
                     phepTinh = "";
-                }
                 break;
             case R.id.btnDoiDau:
                 if (strKQ != "0"){
