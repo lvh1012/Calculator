@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnCong, btnTru, btnNhan, btnChia, btnBang;
     Button btnDoiDau, btnCham, btnXoa, btnXoaHet, btnCE;
 
-    String soThuNhat = "", soThuHai = "", phepTinh = "", ketQua = "";
+    String soThuNhat, soThuHai, phepTinh;
+    String soThuHaiTruoc, phepTinhTruoc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +72,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnXoa.setOnClickListener(this);
         btnXoaHet.setOnClickListener(this);
         btnCE.setOnClickListener(this);
+
+        soThuNhat = "10"; // bit dau danh dau dang nhap hay khong
+        soThuHai = "0";
+        phepTinh = "";
+
+        soThuHaiTruoc = phepTinhTruoc = "";
     }
 
     @Override
@@ -79,125 +86,605 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String strKQ = txtKQ.getText().toString();
         switch(id) {
             case R.id.btn0:
-                if (strKQ != "0"){
-                    txtKQ.setText(strKQ + "0");
+                if (strKQ == "0"){
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText("0");
+                        soThuNhat = "10";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("0");
+                            soThuNhat = "10";
+                        }
+                        else {
+                            txtKQ.setText("0");
+                            soThuHai = "10";
+                        }
+                    }
+                }
+                else {
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText(strKQ + "0");
+                        soThuNhat = "1" + strKQ + "0";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("0");
+                            soThuNhat = "10";
+                        }
+                        else {
+                            if (soThuHai.equals("1")){
+                                txtKQ.setText("0");
+                                soThuHai = "10";
+                            }
+                            else {
+                                txtKQ.setText(strKQ + "0");
+                                soThuHai = "1" + strKQ + "0";
+                            }
+                        }
+                    }
                 }
                 break;
             case R.id.btn1:
                 if (strKQ == "0"){
-                    txtKQ.setText("1");
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText("1");
+                        soThuNhat = "11";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("1");
+                            soThuNhat = "11";
+                        }
+                        else {
+                            txtKQ.setText("1");
+                            soThuHai = "11";
+                        }
+                    }
                 }
-                else{
-                    txtKQ.setText(strKQ + "1");
+                else {
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText(strKQ + "1");
+                        soThuNhat = "1" + strKQ + "1";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("1");
+                            soThuNhat = "11";
+                        }
+                        else {
+                            if (soThuHai.equals("1")){
+                                txtKQ.setText("1");
+                                soThuHai = "11";
+                            }
+                            else {
+                                txtKQ.setText(strKQ + "1");
+                                soThuHai = "1" + strKQ + "1";
+                            }
+                        }
+                    }
                 }
                 break;
             case R.id.btn2:
                 if (strKQ == "0"){
-                    txtKQ.setText("2");
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText("2");
+                        soThuNhat = "12";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("2");
+                            soThuNhat = "12";
+                        }
+                        else {
+                            txtKQ.setText("2");
+                            soThuHai = "12";
+                        }
+                    }
                 }
-                else{
-                    txtKQ.setText(strKQ + "2");
+                else {
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText(strKQ + "2");
+                        soThuNhat = "1" + strKQ + "2";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("2");
+                            soThuNhat = "12";
+                        }
+                        else {
+                            if (soThuHai.equals("1")){
+                                txtKQ.setText("2");
+                                soThuHai = "12";
+                            }
+                            else {
+                                txtKQ.setText(strKQ + "2");
+                                soThuHai = "1" + strKQ + "2";
+                            }
+                        }
+                    }
                 }
                 break;
             case R.id.btn3:
                 if (strKQ == "0"){
-                    txtKQ.setText("3");
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText("3");
+                        soThuNhat = "13";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("3");
+                            soThuNhat = "13";
+                        }
+                        else {
+                            txtKQ.setText("3");
+                            soThuHai = "13";
+                        }
+                    }
                 }
-                else{
-                    txtKQ.setText(strKQ + "3");
+                else {
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText(strKQ + "3");
+                        soThuNhat = "1" + strKQ + "3";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("3");
+                            soThuNhat = "13";
+                        }
+                        else {
+                            if (soThuHai.equals("1")){
+                                txtKQ.setText("3");
+                                soThuHai = "13";
+                            }
+                            else {
+                                txtKQ.setText(strKQ + "3");
+                                soThuHai = "1" + strKQ + "3";
+                            }
+                        }
+                    }
                 }
                 break;
             case R.id.btn4:
                 if (strKQ == "0"){
-                    txtKQ.setText("4");
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText("4");
+                        soThuNhat = "14";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("4");
+                            soThuNhat = "14";
+                        }
+                        else {
+                            txtKQ.setText("4");
+                            soThuHai = "14";
+                        }
+                    }
                 }
-                else{
-                    txtKQ.setText(strKQ + "4");
+                else {
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText(strKQ + "4");
+                        soThuNhat = "1" + strKQ + "4";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("4");
+                            soThuNhat = "14";
+                        }
+                        else {
+                            if (soThuHai.equals("1")){
+                                txtKQ.setText("4");
+                                soThuHai = "14";
+                            }
+                            else {
+                                txtKQ.setText(strKQ + "4");
+                                soThuHai = "1" + strKQ + "4";
+                            }
+                        }
+                    }
                 }
                 break;
             case R.id.btn5:
                 if (strKQ == "0"){
-                    txtKQ.setText("5");
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText("5");
+                        soThuNhat = "15";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("5");
+                            soThuNhat = "15";
+                        }
+                        else {
+                            txtKQ.setText("5");
+                            soThuHai = "15";
+                        }
+                    }
                 }
-                else{
-                    txtKQ.setText(strKQ + "5");
+                else {
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText(strKQ + "5");
+                        soThuNhat = "1" + strKQ + "5";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("5");
+                            soThuNhat = "15";
+                        }
+                        else {
+                            if (soThuHai.equals("1")){
+                                txtKQ.setText("5");
+                                soThuHai = "15";
+                            }
+                            else {
+                                txtKQ.setText(strKQ + "5");
+                                soThuHai = "1" + strKQ + "5";
+                            }
+                        }
+                    }
                 }
                 break;
             case R.id.btn6:
                 if (strKQ == "0"){
-                    txtKQ.setText("6");
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText("6");
+                        soThuNhat = "16";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("6");
+                            soThuNhat = "16";
+                        }
+                        else {
+                            txtKQ.setText("6");
+                            soThuHai = "16";
+                        }
+                    }
                 }
-                else{
-                    txtKQ.setText(strKQ + "6");
+                else {
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText(strKQ + "6");
+                        soThuNhat = "1" + strKQ + "6";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("6");
+                            soThuNhat = "16";
+                        }
+                        else {
+                            if (soThuHai.equals("1")){
+                                txtKQ.setText("6");
+                                soThuHai = "16";
+                            }
+                            else {
+                                txtKQ.setText(strKQ + "6");
+                                soThuHai = "1" + strKQ + "6";
+                            }
+                        }
+                    }
                 }
                 break;
             case R.id.btn7:
                 if (strKQ == "0"){
-                    txtKQ.setText("7");
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText("7");
+                        soThuNhat = "17";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("7");
+                            soThuNhat = "17";
+                        }
+                        else {
+                            txtKQ.setText("7");
+                            soThuHai = "17";
+                        }
+                    }
                 }
-                else{
-                    txtKQ.setText(strKQ + "7");
+                else {
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText(strKQ + "7");
+                        soThuNhat = "1" + strKQ + "7";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("7");
+                            soThuNhat = "17";
+                        }
+                        else {
+                            if (soThuHai.equals("1")){
+                                txtKQ.setText("7");
+                                soThuHai = "17";
+                            }
+                            else {
+                                txtKQ.setText(strKQ + "7");
+                                soThuHai = "1" + strKQ + "7";
+                            }
+                        }
+                    }
                 }
                 break;
             case R.id.btn8:
                 if (strKQ == "0"){
-                    txtKQ.setText("8");
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText("8");
+                        soThuNhat = "18";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("8");
+                            soThuNhat = "18";
+                        }
+                        else {
+                            txtKQ.setText("8");
+                            soThuHai = "18";
+                        }
+                    }
                 }
-                else{
-                    txtKQ.setText(strKQ + "8");
+                else {
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText(strKQ + "8");
+                        soThuNhat = "1" + strKQ + "8";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("8");
+                            soThuNhat = "18";
+                        }
+                        else {
+                            if (soThuHai.equals("1")){
+                                txtKQ.setText("8");
+                                soThuHai = "18";
+                            }
+                            else {
+                                txtKQ.setText(strKQ + "8");
+                                soThuHai = "1" + strKQ + "8";
+                            }
+                        }
+                    }
                 }
                 break;
             case R.id.btn9:
                 if (strKQ == "0"){
-                    txtKQ.setText("9");
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText("9");
+                        soThuNhat = "19";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("9");
+                            soThuNhat = "19";
+                        }
+                        else {
+                            txtKQ.setText("9");
+                            soThuHai = "19";
+                        }
+                    }
                 }
-                else{
-                    txtKQ.setText(strKQ + "9");
+                else {
+                    if (soThuNhat.charAt(0) == '1'){
+                        txtKQ.setText(strKQ + "9");
+                        soThuNhat = "1" + strKQ + "9";
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            txtKQ.setText("9");
+                            soThuNhat = "19";
+                        }
+                        else {
+                            if (soThuHai.equals("1")){
+                                txtKQ.setText("9");
+                                soThuHai = "19";
+                            }
+                            else {
+                                txtKQ.setText(strKQ + "9");
+                                soThuHai = "1" + strKQ + "9";
+                            }
+                        }
+                    }
                 }
                 break;
             case R.id.btnCong:
-                txtKQ.setText(Integer.toString(id));
+                    soThuNhat = "0" + soThuNhat.substring(1);
+                    soThuHai = "1";
+                    phepTinh = "+";
                 break;
             case R.id.btnTru:
-                txtKQ.setText(Integer.toString(id));
+                    soThuNhat = "0" + soThuNhat.substring(1);
+                    soThuHai = "1";
+                    phepTinh = "-";
                 break;
             case R.id.btnNhan:
-                txtKQ.setText(Integer.toString(id));
+                    soThuNhat = "0" + soThuNhat.substring(1);
+                    soThuHai = "1";
+                    phepTinh = "x";
                 break;
             case R.id.btnChia:
-                txtKQ.setText(Integer.toString(id));
+                    soThuNhat = "0" + soThuNhat.substring(1);
+                    soThuHai = "1";
+                    phepTinh = "/";
                 break;
             case R.id.btnBang:
-                txtKQ.setText(Integer.toString(id));
+                if (strKQ != "0"){
+                    int ketqua= 0;
+
+                    if (soThuNhat.length() > 1 && soThuHai.length() > 1 && !phepTinh.isEmpty()){
+                        soThuNhat = soThuNhat.substring(1);
+                        soThuHai = soThuHai.substring(1);
+                        soThuHaiTruoc = soThuHai;
+                        phepTinhTruoc = phepTinh;
+
+                        if (phepTinh.equals("+")){
+                            ketqua = Integer.valueOf(soThuNhat) + Integer.valueOf(soThuHai);
+                            txtKQ.setText(Integer.toString(ketqua));
+                        }
+                        else if (phepTinh.equals("-")){
+                            ketqua = Integer.valueOf(soThuNhat) - Integer.valueOf(soThuHai);
+                            txtKQ.setText(Integer.toString(ketqua));
+                        }
+                        else if (phepTinh.equals("x")){
+                            ketqua = Integer.valueOf(soThuNhat) * Integer.valueOf(soThuHai);
+                            txtKQ.setText(Integer.toString(ketqua));
+                        }
+                        else{
+                            if (soThuHai.equals("0")){
+                                txtKQ.setText("Cannot divide by zero");
+                            }
+                            else{
+                                ketqua = Integer.valueOf(soThuNhat) / Integer.valueOf(soThuHai);
+                                txtKQ.setText(Integer.toString(ketqua));
+                            }
+                        }
+                    }
+                    else if (soThuNhat.length() > 1 && soThuHai.length() == 1 && phepTinh.isEmpty()){
+                        if (!soThuHaiTruoc.isEmpty() && !phepTinhTruoc.isEmpty()){
+                            soThuNhat = soThuNhat.substring(1);
+                            soThuHai = soThuHaiTruoc;
+                            phepTinh = phepTinhTruoc;
+
+                            if (phepTinh.equals("+")){
+                                ketqua = Integer.valueOf(soThuNhat) + Integer.valueOf(soThuHai);
+                                txtKQ.setText(Integer.toString(ketqua));
+                            }
+                            else if (phepTinh.equals("-")){
+                                ketqua = Integer.valueOf(soThuNhat) - Integer.valueOf(soThuHai);
+                                txtKQ.setText(Integer.toString(ketqua));
+                            }
+                            else if (phepTinh.equals("x")){
+                                ketqua = Integer.valueOf(soThuNhat) * Integer.valueOf(soThuHai);
+                                txtKQ.setText(Integer.toString(ketqua));
+                            }
+                            else{
+                                if (soThuHai.equals("0")){
+                                    txtKQ.setText("Cannot divide by zero");
+                                }
+                                else{
+                                    ketqua = Integer.valueOf(soThuNhat) / Integer.valueOf(soThuHai);
+                                    txtKQ.setText(Integer.toString(ketqua));
+                                }
+                            }
+                        }
+                    }
+                    else if (soThuNhat.length() > 1 && soThuHai.length() > 1 && phepTinh.isEmpty()){
+                        soThuNhat = soThuHai.substring(1);
+                        soThuHai = soThuHaiTruoc;
+
+                        phepTinh = phepTinhTruoc;
+                        if (phepTinh.equals("+")){
+                            ketqua = Integer.valueOf(soThuNhat) + Integer.valueOf(soThuHai);
+                            txtKQ.setText(Integer.toString(ketqua));
+                        }
+                        else if (phepTinh.equals("-")){
+                            ketqua = Integer.valueOf(soThuNhat) - Integer.valueOf(soThuHai);
+                            txtKQ.setText(Integer.toString(ketqua));
+                        }
+                        else if (phepTinh.equals("x")){
+                            ketqua = Integer.valueOf(soThuNhat) * Integer.valueOf(soThuHai);
+                            txtKQ.setText(Integer.toString(ketqua));
+                        }
+                        else{
+                            if (soThuHai.equals("0")){
+                                txtKQ.setText("Cannot divide by zero");
+                            }
+                            else{
+                                ketqua = Integer.valueOf(soThuNhat) / Integer.valueOf(soThuHai);
+                                txtKQ.setText(Integer.toString(ketqua));
+                            }
+                        }
+                    }
+                    else if (soThuNhat.length() > 1 && soThuHai.length() == 1 && !phepTinh.isEmpty()){
+                        soThuNhat = soThuNhat.substring(1);
+                        soThuHai = soThuHaiTruoc = soThuNhat;
+
+                        phepTinhTruoc = phepTinh;
+                        if (phepTinh.equals("+")){
+                            ketqua = Integer.valueOf(soThuNhat) + Integer.valueOf(soThuHai);
+                            txtKQ.setText(Integer.toString(ketqua));
+                        }
+                        else if (phepTinh.equals("-")){
+                            ketqua = Integer.valueOf(soThuNhat) - Integer.valueOf(soThuHai);
+                            txtKQ.setText(Integer.toString(ketqua));
+                        }
+                        else if (phepTinh.equals("x")){
+                            ketqua = Integer.valueOf(soThuNhat) * Integer.valueOf(soThuHai);
+                            txtKQ.setText(Integer.toString(ketqua));
+                        }
+                        else{
+                            if (soThuHai.equals("0")){
+                                txtKQ.setText("Cannot divide by zero");
+                            }
+                            else{
+                                ketqua = Integer.valueOf(soThuNhat) / Integer.valueOf(soThuHai);
+                                txtKQ.setText(Integer.toString(ketqua));
+                            }
+                        }
+                    }
+
+                    // reset
+                    soThuNhat = "0" + Integer.toString(ketqua);
+                    soThuHai = "1";
+                    phepTinh = "";
+                }
                 break;
             case R.id.btnDoiDau:
                 if (strKQ != "0"){
-                    txtKQ.setText(Integer.toString(Integer.parseInt(strKQ)*(-1)));
+                    String doiDau = Integer.toString(Integer.parseInt(strKQ)*(-1));
+                    txtKQ.setText(doiDau);
+                    if (soThuNhat.charAt(0) == '1'){
+                        soThuNhat = "1" + doiDau;
+                    }
+                    else {
+                        if (phepTinh.isEmpty()){
+                            soThuNhat = "1" + doiDau;
+                        }
+                        else {
+                            soThuHai =  "1" + doiDau;
+                        }
+                    }
                 }
                 break;
             case R.id.btnCham:
-                txtKQ.setText(Integer.toString(id));
+
                 break;
             case R.id.btnXoa:
-                if (strKQ.length() > 2){
-                    txtKQ.setText(strKQ.substring(0, strKQ.length() - 1));
+                if (soThuNhat.charAt(0) == '1'){
+                    if (strKQ.length() > 2 || (strKQ.length() == 2 && strKQ.charAt(0) != '-')){
+                        txtKQ.setText(strKQ.substring(0, strKQ.length() - 1));
+                        soThuNhat = "1" + strKQ.substring(0, strKQ.length() - 1);
+                    }
+                    else if ((strKQ.length() == 2 && strKQ.charAt(0) == '-') || (strKQ.length() == 1 && strKQ != "0")){
+                        txtKQ.setText("0");
+                        soThuNhat = "10";
+                    }
                 }
-                else if (strKQ.length() == 2 && strKQ.charAt(0) != '-'){
-                    txtKQ.setText(strKQ.substring(0, strKQ.length() - 1));
+                else {
+                    if (!phepTinh.isEmpty()){
+                        if (!soThuHai.equals("1")){
+                            if (strKQ.length() > 2 || (strKQ.length() == 2 && strKQ.charAt(0) != '-')){
+                                txtKQ.setText(strKQ.substring(0, strKQ.length() - 1));
+                                soThuHai = "1" + strKQ.substring(0, strKQ.length() - 1);
+                            }
+                            else if ((strKQ.length() == 2 && strKQ.charAt(0) == '-') || (strKQ.length() == 1 && strKQ != "0")){
+                                txtKQ.setText("0");
+                                soThuHai = "10";
+                            }
+                        }
+                    }
                 }
-                else if (strKQ.length() == 2 && strKQ.charAt(0) == '-'){
-                    txtKQ.setText("0");
-                }
-                else if (strKQ.length() == 1 && strKQ != "0"){
-                    txtKQ.setText("0");
-                }
-
                 break;
             case R.id.btnXoaHet:
                 txtKQ.setText("0");
+                soThuNhat = "10";
+                soThuHai = "0";
+                phepTinh = "";
+                soThuHaiTruoc = phepTinhTruoc = "";
                 break;
             case R.id.btnCE:
                 txtKQ.setText("0");
+                soThuNhat = "10";
+                soThuHai = "0";
+                phepTinh = "";
                 break;
         }
 

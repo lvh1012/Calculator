@@ -63,7 +63,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#D3D3D3"
-            android:text="&lt;="
+            android:text="BS"
             android:layout_margin="1dp"
             android:textSize="20sp"/>
 
@@ -73,7 +73,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#D3D3D3"
-            android:text=":"
+            android:text="/"
             android:layout_margin="1dp"
             android:textSize="20sp"/>
     </LinearLayout>
